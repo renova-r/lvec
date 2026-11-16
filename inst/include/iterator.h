@@ -10,10 +10,14 @@ namespace ldat {
   class lvec;
 
   template<typename T>
-  class lvec_iterator : public std::iterator<std::bidirectional_iterator_tag, T,
-      std::ptrdiff_t, const T*, lvec_val_ref<T>> {
+  class lvec_iterator {
     public: 
-      
+      typedef std::bidirectional_iterator_tag iterator_category;
+      typedef T value_type;
+      typedef std::ptrdiff_t difference_type;
+      typedef const T* pointer;
+      typedef lvec_val_ref<T> reference;
+
       lvec_iterator(lvec<T>& vec, unsigned int pos) : vec_(vec), pos_(pos) {};
       lvec_iterator(const lvec_iterator& it) : vec_(it.vec_), pos_(it.pos_) {};
       ~lvec_iterator() {};
@@ -110,3 +114,4 @@ namespace ldat {
 }
 
 #endif
+

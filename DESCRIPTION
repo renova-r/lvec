@@ -1,9 +1,10 @@
 Package: lvec
 Type: Package
 Title: Out of Memory Vectors
-Version: 0.2.5
-Date: 2023-10-20
-Author: Jan van der Laan
+Version: 0.2.5.9001
+Authors@R: person(given = "Jan", family = "van der Laan",
+    role = c("aut", "cre"), email = "r@eoos.dds.nl")
+Author: Jan van der Laan [aut, cre]
 Maintainer: Jan van der Laan <r@eoos.dds.nl>
 Description: Core functionality for working with vectors (numeric, integer,
     logical and character) that are too large to keep in memory. The vectors are
@@ -12,12 +13,12 @@ Description: Core functionality for working with vectors (numeric, integer,
     creating, indexing, ordering and sorting) and provides C++ headers which can
     be used by other packages to extend the functionality provided in this
     package.
+    Compatibility updates by Renova.
 URL: https://github.com/djvanderlaan/lvec
 Depends: stats, R (>= 3.0.0)
 LinkingTo: BH, Rcpp
 Imports: Rcpp
 Suggests: testthat
-SystemRequirements: C++11
 License: GPL-3
 LazyLoad: yes
 RoxygenNote: 7.2.1
