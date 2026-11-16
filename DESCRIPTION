@@ -1,7 +1,7 @@
 Package: lvec
 Type: Package
 Title: Out of Memory Vectors
-Version: 0.2.5.9001
+Version: 0.2.5.9002
 Authors@R: person(given = "Jan", family = "van der Laan",
     role = c("aut", "cre"), email = "r@eoos.dds.nl")
 Author: Jan van der Laan [aut, cre]

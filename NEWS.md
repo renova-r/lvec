@@ -1,3 +1,8 @@
+# lvec 0.2.5.9002
+
+- `inst/include/iterator.h`: the `lvec_iterator` comparison operators (`==`, `!=`, `<`, `>`, `<=`, `>=`), `operator+(int)`, `operator-(int)` and the iterator difference `operator-` are now `const` member functions, and `operator*() const` returns `lvec_val_ref<T>` instead of `const lvec_val_ref<T>`. LLVM libc++'s `std::sort` applies these operators to `const` iterators and assigns through `*__begin` with a `const` iterator, so `src/order.cpp` failed to compile with clang/libc++ (macOS, WebAssembly, Windows ARM64). Operator bodies, return values and the `int` difference type are unchanged.
+- `DESCRIPTION`: `Version` set to `0.2.5.9002`.
+
 # lvec 0.2.5.9001
 
 Renova release, based on CRAN lvec 0.2.5 (archived on CRAN 2023-08-10).

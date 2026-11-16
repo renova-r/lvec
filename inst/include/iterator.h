@@ -50,15 +50,15 @@ namespace ldat {
         return old;
       }
 
-      lvec_iterator operator+(int n) {
+      lvec_iterator operator+(int n) const {
         return lvec_iterator(vec_, pos_ + n);
       }
 
-      lvec_iterator operator-(int n) {
+      lvec_iterator operator-(int n) const {
         return lvec_iterator(vec_, pos_ - n);
       }
 
-      int operator-(const lvec_iterator& rhs) {
+      int operator-(const lvec_iterator& rhs) const {
         return pos_ - rhs.pos_;
       }
 
@@ -72,31 +72,31 @@ namespace ldat {
         return *this;
       }
 
-      bool operator<(const lvec_iterator& rhs) {
+      bool operator<(const lvec_iterator& rhs) const {
         return pos_ < rhs.pos_;
       }
 
-      bool operator>(const lvec_iterator& rhs) {
+      bool operator>(const lvec_iterator& rhs) const {
         return pos_ > rhs.pos_;
       }
 
-      bool operator<=(const lvec_iterator& rhs) {
+      bool operator<=(const lvec_iterator& rhs) const {
         return pos_ <= rhs.pos_;
       }
 
-      bool operator>=(const lvec_iterator& rhs) {
+      bool operator>=(const lvec_iterator& rhs) const {
         return pos_ >= rhs.pos_;
       }
 
-      bool operator==(const lvec_iterator& rhs) {
+      bool operator==(const lvec_iterator& rhs) const {
         return pos_ == rhs.pos_;
       }
 
-      bool operator!=(const lvec_iterator& rhs) {
+      bool operator!=(const lvec_iterator& rhs) const {
         return !(pos_ == rhs.pos_);
       }
 
-      const lvec_val_ref<T> operator*() const {
+      lvec_val_ref<T> operator*() const {
         return lvec_val_ref<T>(vec_, pos_);
       }
 
